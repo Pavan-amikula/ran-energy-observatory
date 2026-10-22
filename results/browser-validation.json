@@ -3,13 +3,20 @@
   "checks": [
     "NR initial result",
     "three policy tabs",
+    "synchronized policy comparison grids",
+    "cell inspector pin / keyboard / release",
+    "PNG export",
     "animated replay",
     "time scrubbing",
+    "power-chart linked navigation",
+    "equal-work preset and service verdict",
+    "overload preset and service verdict",
     "LTE geometry",
-    "overload experiment",
-    "CSV upload",
+    "unsaved configuration indicator",
+    "CSV upload and clear",
     "JSON export",
     "telemetry connection",
-    "390px responsive layout"
+    "short horizon with larger grid window",
+    "responsive layouts at 360,390,768,1024,1280px"
   ]
 }

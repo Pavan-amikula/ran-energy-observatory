@@ -22,7 +22,7 @@ flowchart LR
 
 - `app/engine.py`: validated configuration, seeded packet arrivals, CSV trace normalization, scheduling, state inference and energy integration. Each policy receives the same packet objects; remaining bits and completion records are local to each run.
 - `app/main.py`: synchronous computational endpoints run through FastAPI's thread pool; the async replay endpoint offloads the simulation before emitting paced events. External frames have a strict 14-symbol shape and a bounded deque. This is a single-process local research API; the memory buffer is not shared across multiple server workers.
-- `app/static/`: plain JavaScript + responsive CSS + Canvas charts. No frontend build step or chart CDN is required. Fonts have local fallbacks. The external allocation preview is separate from simulation KPIs to preserve provenance.
+- `app/static/`: plain JavaScript + responsive CSS + Canvas charts. No frontend build step or chart CDN is required. Fonts have local fallbacks. Synchronized preview grids share the detailed grid's time window; an inspector reads PRB/symbol allocation and interval-average power directly from the selected result. The power overview highlights that same window. Input modifications are marked until a new experiment succeeds. The external allocation preview is separate from simulation KPIs to preserve provenance.
 - `scripts/benchmark.py`: 90 paired configurations, 270 policy evaluations. All seed-level outputs retained.
 - `scripts/equal_work.py`: drain-window experiments assert zero backlog and identical delivered bits; power sensitivity holds traffic seed fixed.
 - `scripts/forecast.py`: independent normalized activity prediction, with train/test split and a naive persistence comparator.

@@ -14,6 +14,8 @@ Use the facts below to tailor a resume and project discussion for **Master Thesi
 
 **Deliverables:** Working FastAPI application; professional responsive dashboard; symbol-level PRB grids; three scheduling/power policies; CSV packet-trace import; JSON export; external allocation telemetry API and visualization; paced SSE replay; reproducible experiment scripts; numerical results; static research figures; a recorded application demonstration embedded in the README; source and data provenance; automated tests; GitHub Actions workflow; Docker recipe; research notes and interview walkthrough.
 
+**Interface refinement:** Reviewed telecom/instrument dashboards, public project interfaces and community discussions. Added reproducible experiment presets, synchronized policy previews, a hover/pinned/keyboard cell inspector, numeric PRB axes, linked grid/power navigation, delivered-work context, state composition, unapplied-input indication and labelled PNG export. Browser interactions were checked at 360, 390, 768, 1024 and 1280 px; screenshots and the actual-app recording were refreshed. See `docs/interface-research.md` for references and access limits.
+
 ## Problem and motivation
 
 Mobile-network radio energy depends on when resources are allocated, whether required signals remain active, and whether idle gaps are long enough to justify entering sleep. Average PRB utilization hides this temporal structure. The project makes resource allocation visible in a frequency–time grid and connects it to explicit power-state assumptions, packet service and energy–latency tradeoffs.

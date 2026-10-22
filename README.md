@@ -14,6 +14,12 @@ A working research workspace for exploring how **4G LTE / 5G NR scheduling, Phys
 
 **[Watch / download the full MP4 demonstration](results/demo.mp4)** · [LTE screenshot](results/lte-dashboard.png) · [Mobile screenshot](results/mobile-dashboard.png)
 
+The updated research workbench adds **one-click experiments, a cell inspector, synchronized policy previews, linked power-chart navigation and grid PNG export**. The service summary distinguishes equal completed payload from unfinished queues and overloaded service.
+
+![Synchronized comparison of three allocation policies](results/policy-comparison.png)
+
+[Equal-work preset screenshot](results/equal-work-dashboard.png) · [Interface review and design rationale](docs/interface-research.md)
+
 The recording shows actual application interactions: policy comparison, animated grid replay, time scrubbing, LTE configuration, overload traffic, packet CSV import and JSON export. It is a screen recording of the running local app.
 
 ## The research question
@@ -52,7 +58,9 @@ The native Python path was executed and verified. The Docker recipe is provided 
 
 | Capability | Implementation |
 |---|---|
-| Inspect the frequency–time domain | Symbol-resolution PRB grid, UE colours, mandatory signalling, tooltips, time windows and scrubbing |
+| Inspect the frequency–time domain | Symbol-resolution PRB grid, numerical axes, hover / click-to-pin cell inspector, keyboard navigation, time windows and scrubbing |
+| Compare a common time window | Synchronized previews for all three policies; power overview highlights and navigates the same window |
+| Start a meaningful experiment | Bursty, equal-work with a 40 ms drain, and overload presets; delivered-work and deadline context beside the energy KPIs |
 | Compare scheduling decisions | Cyclic UE-priority frequency-major baseline; the same allocations with micro sleep; EDF traffic consolidation with micro sleep |
 | Explain power saving | Active / idle / sleep / wake states, configurable power parameters and explicit transition energy |
 | Observe service quality | Throughput, completed packets, queued bits, p95 packet latency, deadline misses, censored packets and delivery fairness |
@@ -61,7 +69,7 @@ The native Python path was executed and verified. The Docker recipe is provided 
 | Bring a packet trace | CSV upload with validation and identical trace replay for each policy |
 | Receive external allocations | REST ingestion, bounded 500-frame memory buffer, dashboard polling and a separate external-frame visualization |
 | Stream a demonstration | Server-Sent Events with explicitly labelled paced simulation replay |
-| Reproduce findings | Seeded experiments, exported CSV/JSON, equal-payload checks, sensitivity analysis and automated tests |
+| Reproduce findings | Seeded experiments, exported CSV/JSON and grid PNG, equal-payload checks, sensitivity analysis and automated tests |
 | Explore machine learning | Ridge AR(6) activity forecasting on held-out week-labelled Milan profiles, compared against persistence |
 
 ## Results with evidence
@@ -143,7 +151,7 @@ python -m scripts.capture_demo
 python -m scripts.export_video
 ```
 
-Browser checks cover policy tabs, replay, LTE, overload, CSV import, JSON export, telemetry connection and a 390 px mobile layout. See [browser-validation.json](results/browser-validation.json). `scripts/fetch_profiles.py` can regenerate the licensed subset from the pinned upstream source; internet access is needed only for fetching and browser installation.
+Browser checks cover policy tabs, synchronized grid previews, cell inspection and keyboard pin/release, PNG export, linked chart navigation, all three presets, replay, LTE, unapplied-input indication, CSV import/clear, JSON export, telemetry connection, a short horizon with a larger window, and responsive layouts at 360, 390, 768, 1024 and 1280 px. See [browser-validation.json](results/browser-validation.json). `scripts/fetch_profiles.py` can regenerate the licensed subset from the pinned upstream source; internet access is needed only for fetching and browser installation.
 
 ## Packet traces and telemetry
 

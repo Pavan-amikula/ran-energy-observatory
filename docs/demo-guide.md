@@ -3,8 +3,8 @@
 ## Ninety-second walkthrough
 
 1. **Problem, 15 seconds:** explain that empty frequency resources alone do not switch off a radio. Whole transmit-symbol gaps are the opportunity. The project makes the link between scheduling, resource allocation and energy visible.
-2. **Grid, 20 seconds:** show always-on, micro sleep and compact tabs. Point out teal urgent UEs, purple flexible UEs, reserved signalling and the state strip. Scrub the same time region across policies.
-3. **Tradeoff, 20 seconds:** compare energy, p95 latency, deadline misses and queued bits. Explain why energy savings without matching delivered work can mislead. Show `results/equal-work.json` and the 40 ms drain assertion.
+2. **Grid, 20 seconds:** open Compare grids to show the same window across all three policies. Point out teal urgent UEs, purple flexible UEs, reserved signalling and the state strip. Click a cell to pin its PRB/time, allocation and radio state in the inspector; click the power overview to navigate.
+3. **Tradeoff, 20 seconds:** choose the Equal delivered work preset, compare energy, p95 latency, deadline misses and queued bits. Explain why energy savings without matching delivered work can mislead. Show `results/equal-work.json` and the 40 ms drain assertion.
 4. **Stress test, 15 seconds:** select overload and high offered load. Highlight missed deadlines and accumulated backlog. Explain that the model does not claim energy optimization preserves service at arbitrary load.
 5. **Evidence, 20 seconds:** open the benchmark CSV, source notes and forecast metrics. Describe the separately licensed normalized Milan activity profiles, held-out week-labelled forecasting experiment and explicit distinction between measured activity and modelled power.
 
