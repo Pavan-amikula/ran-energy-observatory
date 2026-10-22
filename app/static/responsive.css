@@ -1,0 +1,5 @@
+@media (max-width: 720px) {
+  header { gap: 14px; }
+  .crumb { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .api-link { flex-shrink: 0; }
+}

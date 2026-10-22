@@ -68,6 +68,12 @@ def test_unfinished_packet_due_exactly_at_horizon_is_missed():
     assert s['deadline_misses']==1 and s['censored_packets']==0
 
 def test_equal_work_drain_and_measurement_derived_envelope():
+    import hashlib
+    import json
+    from pathlib import Path
+    root=Path(__file__).resolve().parents[1]
+    expected=json.loads((root/'data'/'provenance.json').read_text())['subset_sha256']
+    assert hashlib.sha256((root/'data'/'milan_profiles.csv').read_bytes()).hexdigest()==expected
     r=compare(Config(duration_ms=80,drain_ms=40))
     assert all(v['stats']['backlog_bits']==0 for v in r['runs'].values())
     assert len({v['stats']['delivered_bits'] for v in r['runs'].values()})==1
