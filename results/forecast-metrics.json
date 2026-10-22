@@ -1,0 +1,28 @@
+{
+  "task": "one-step-ahead prediction of normalized measurement-derived traffic activity; not energy prediction",
+  "split": "week labels 1\u20132 training; week label 3 held out; no shuffled split",
+  "caveat": "Published normalized profiles, not a dated raw network time series. Actual chronological week dates are not verified. Test lags use previously observed test values.",
+  "train_examples": 2010,
+  "test_examples": 1002,
+  "ridge_alpha": 0.1,
+  "model": "six-lag ridge autoregression with daily sine/cosine features",
+  "ridge": {
+    "mae": 0.036144750455839356,
+    "rmse": 0.05215694965054003
+  },
+  "persistence": {
+    "mae": 0.039451196302152595,
+    "rmse": 0.05651311631005183
+  },
+  "coefficients": [
+    0.02606434764935774,
+    0.5647151980711698,
+    0.20052228145190348,
+    0.11157941250308251,
+    0.009189021553156219,
+    0.0633869599039152,
+    0.000181236299471549,
+    0.003049640171184559,
+    -0.025004867455538315
+  ]
+}

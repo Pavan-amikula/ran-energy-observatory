@@ -1,0 +1,16 @@
+{
+  "python": "3.13.4",
+  "packages": {
+    "fastapi": "0.159.1",
+    "uvicorn": "0.54.0",
+    "numpy": "2.2.6",
+    "pydantic": "2.11.7",
+    "pytest": "9.1.1",
+    "httpx": "0.28.1",
+    "playwright": "1.64.0",
+    "matplotlib": "3.10.3",
+    "Pillow": "11.2.1",
+    "imageio": "2.38.1",
+    "imageio-ffmpeg": "0.6.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "page_errors": [],
+  "checks": [
+    "NR initial result",
+    "three policy tabs",
+    "animated replay",
+    "time scrubbing",
+    "LTE geometry",
+    "overload experiment",
+    "CSV upload",
+    "JSON export",
+    "telemetry connection",
+    "390px responsive layout"
+  ]
+}

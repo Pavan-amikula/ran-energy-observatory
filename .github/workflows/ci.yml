@@ -1,0 +1,19 @@
+name: Validate simulation
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+      - run: python -m scripts.benchmark
+      - run: python -m scripts.equal_work
+      - run: python -m scripts.forecast
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reproducible-experiment-results
+          path: results/

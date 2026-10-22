@@ -1,0 +1,9 @@
+{
+  "source_url": "https://raw.githubusercontent.com/arimvydas/mob-traffic-ds/da1db1963b22437aadf6621d6d6c88ffbe2425f7/data/traffic_normal.csv",
+  "source_commit": "da1db1963b22437aadf6621d6d6c88ffbe2425f7",
+  "source_sha256": "340bdb28a8cf93ba13864760736276c744e8e148554d2f6da6404d05233269ac",
+  "description": "Published measurement-derived normalized Milan internet activity profiles, square 4259, 3 week labels x 7 days x 144 ten-minute bins. Not raw bytes, PRBs or power.",
+  "original_source": "https://doi.org/10.7910/DVN/EGZHFV",
+  "source_license": "GPL-3.0; underlying Telecom Italia data ODbL-1.0",
+  "subset_sha256": "d0bd52136a46e0105bc1b0b415edbe5844d31ce4815320670cc9c9591697b1f3"
+}
